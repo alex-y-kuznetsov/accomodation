@@ -63,7 +63,6 @@
 
 .cards-item {
     width: 30%;
-    border: 2px solid var(--color-blue);
     box-shadow: var(--primary-shadow);
     display: flex;
     flex-direction: column;
@@ -119,7 +118,7 @@
 }
 
 .life-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 20px;

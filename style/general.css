@@ -104,3 +104,22 @@ ul {
 .page-section {
     margin-top: 80px;
 }
+
+.button {
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid var(--primary-color);
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    transition: all var(--main-transition);
+    padding-inline: 24px;
+    text-decoration: none;
+}
+
+.button:hover,
+a[href].button:hover {
+    font-weight: normal;
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    transition: all var(--main-transition);
+}

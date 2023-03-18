@@ -53,26 +53,11 @@
     border-bottom-color: var(--color-green);
 }
 
-.form-submit {
-    font-size: 20px;
-    cursor: pointer;
-    border: 3px solid var(--primary-color);
-    background-color: var(--color-white);
-    color: var(--primary-color);
-    transition: all var(--main-transition);
-    padding-inline: 24px;
-}
-
-.form-submit:hover {
-    background-color: var(--primary-color);
-    color: var(--color-white);
-    transition: all var(--main-transition);
-}
-
 /* Cards */
 .cards-cover {
     display: flex;
     gap: 20px;
+    padding-top: 20px;
     justify-content: space-between;
 }
 
@@ -105,8 +90,41 @@
     padding: 0 20px;
     font-size: 34px;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 .cards-text {
     padding: 0 20px;
+}
+
+/* Life */
+.life-cover {
+    padding: 20px 0;
+}
+
+.life-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.life-item + .life-item {
+    margin-top: 20px;
+}
+
+.life-image img {
+    width: 100%;
+    height: auto;
+}
+
+.life-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.life-text {
+    margin-bottom: 20px;
 }

@@ -1,4 +1,3 @@
-/* Header */
 .header-cover {
     display: grid;
     grid-template-columns: 80px auto 200px;
@@ -47,7 +46,7 @@
 
 .level-one-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 140px);
+    grid-template-columns: repeat(auto-fill, 160px);
     gap: 6px;
     height: 100%;
     align-items: center;

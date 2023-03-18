@@ -1,3 +1,4 @@
+/* Intro */
 .page-intro {
     padding: 80px 0;
     position: relative;
@@ -66,4 +67,46 @@
     background-color: var(--primary-color);
     color: var(--color-white);
     transition: all var(--main-transition);
+}
+
+/* Cards */
+.cards-cover {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.cards-item {
+    width: 30%;
+    border: 2px solid var(--color-blue);
+    box-shadow: var(--primary-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cards-image {
+    width: 100%;
+    background-color: var(--alt-bg-color);
+}
+
+.cards-image img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+}
+
+.cards-title {
+    padding: 0 20px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.cards-text {
+    padding: 0 20px;
 }

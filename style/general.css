@@ -6,8 +6,9 @@
     --alt-bg-color: #e8e9e9;
     --secondary-bg-color: #dde9eb;
     --color-white: #ffffff;
-
+    --color-green: #1beb85;
     --primary-shadow: 0 0 4px rgba(0,0,0,.1),0 4px 12px rgba(0,0,0,.1);
+    --main-transition: 0.2s;
 }
 
 html,
@@ -95,6 +96,6 @@ ul {
     height: 100%;
 }
 
-.hidden {
+*.hidden.hidden {
     display: none;
 }

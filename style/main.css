@@ -24,10 +24,46 @@
     display: block;
 }
 
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 20px;
+}
+
 .form-cover {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--color-white);
     box-shadow: var(--primary-shadow);
+}
+
+.form-input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid var(--primary-color);
+    outline: none;
+    font-size: 18px;
+    transition: border-color var(--main-transition);
+}
+
+.form-input:focus {
+    border-bottom-color: var(--color-green);
+}
+
+.form-submit {
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid var(--primary-color);
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    transition: all var(--main-transition);
+    padding-inline: 24px;
+}
+
+.form-submit:hover {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    transition: all var(--main-transition);
 }

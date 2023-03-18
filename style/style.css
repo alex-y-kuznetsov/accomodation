@@ -31,7 +31,7 @@ h3,
 h4 {
     font-family: 'Cambria', Arial, sans-serif;
     font-weight: bold;
-    Margin: 0 0 20px 0;
+    Margin: 0 0 10px 0;
 }
 
 h1 {
@@ -44,19 +44,19 @@ h1 {
 
 h2 {
     font-size: 36px;
-    line-height: 44px;
+    line-height: 38px;
     color: var(--text-color);
 }
 
 h3 {
     font-size: 30px;
-    line-height: 38px;
+    line-height: 32px;
     color: var(--primary-color);
 }
 
 h4 {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 26px;
     color: var(--primary-color);
 }
 
@@ -94,6 +94,10 @@ ul {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Header */
@@ -195,5 +199,10 @@ ul {
 
 /* Main */
 .page-intro {
-    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.form-cover {
+    max-width: 600px;
+    margin: 0 auto;
 }

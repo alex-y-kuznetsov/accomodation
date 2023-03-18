@@ -46,12 +46,24 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <section class="page-intro">
-                <h1>Welcome to Universal University!</h1>
-            </section>
+        <section class="page-intro">
+            <div class="container">
+                <h1 class="hidden">Welcome to Universal University - the home of best student accomodation!</h1>
             
-        </div>
+                <div class="form-cover">
+                    <h2>Welcome to Universal University Accomodation!</h2>
+                    <h3>Please book your room by filling the form below</h3>
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" placeholder="First name" id="firstName">
+                        <input type="text" placeholder="Second name" id="secondName">
+                        <input type="text" placeholder="Email" id="email">
+                        <input type="text" placeholder="Phone number" id="phoneNumber">
+                        <button id="submitForm">Submit</button>
+                    </form>
+                    <div id="personalizedMessage" class="hidden"></div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="footer">

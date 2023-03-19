@@ -172,3 +172,18 @@
     object-position: center;
     display: block;
 }
+
+/* News */
+.news-cover {
+    padding-top: 20px;
+}
+
+.news-item + .news-item {
+    margin-top: 20px;
+}
+
+.news-date {
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+}

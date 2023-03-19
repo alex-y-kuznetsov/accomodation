@@ -1,0 +1,37 @@
+.footer {
+    margin-top: 60px;
+    background-color: var(--secondary-bg-color);
+}
+
+.footer-cover {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col .logo {
+    margin-top: auto;
+    width: 60px;
+}
+
+.footer-main-link {
+    width: fit-content;
+}
+
+.footer-sub-link {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.footer-tagline {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 14px;
+    line-height: 16px;
+}

@@ -1,19 +1,21 @@
+// Form
 const form = document.querySelector('#contactForm');
 
-function formLogic(evt) {
+function sendForm(evt) {
     evt.preventDefault();
     
     const personalizedMessage = document.querySelector('#personalizedMessage');
-    const firstName = form.querySelector('#firstName').value;
-    const secondName = form.querySelector('#secondName').value;
-    const email = form.querySelector('#email').value;
-    const phoneNumber = form.querySelector('#phoneNumber').value;
+    const errorMessage = document.querySelector('#errorMessage');
+    const firstName = form.querySelector('#firstName');
+    const secondName = form.querySelector('#secondName');
+    const email = form.querySelector('#email');
+    const phoneNumber = form.querySelector('#phoneNumber');
 
     let detailsObject = {
-        firstName,
-        secondName,
-        email,
-        phoneNumber
+        firstName: firstName.value,
+        secondName: secondName.value,
+        email: email.value,
+        phoneNumber: phoneNumber.value
     }
 
     function getContactMethod() {
@@ -21,22 +23,38 @@ function formLogic(evt) {
         if (detailsObject.email.length && !detailsObject.phoneNumber) {
             contactMethod = `email (${detailsObject.email})`
         }
-        if (detailsObject.phoneNumber && !detailsObject.email) {
-            contactMethod = `phone (${detailsObject.phoneNumber})`
-        }
         if (detailsObject.phoneNumber && detailsObject.email) {
             contactMethod = `email (${detailsObject.email}) or phone (${detailsObject.phoneNumber})`
         }
         return contactMethod;
     };
-    
 
-    const message = `Thank you for your submission, ${detailsObject.firstName}. 
+    let isFormValid = true;
+
+    function validateForm() {
+        const reqFields = [firstName, secondName, email];
+        reqFields.forEach(item => {
+            item.classList.remove('error');
+            if (!item.value) {
+                item.classList.add('error');
+                isFormValid = false;
+            }
+        })
+    };
+    
+    validateForm();
+
+    if (isFormValid) {
+        const message = `Thank you for your submission, ${detailsObject.firstName}. 
                     Our manager will contact you shortly via ${getContactMethod()}`
-    personalizedMessage.innerHTML = message;
-    form.classList.add('hidden');
-    personalizedMessage.classList.remove('hidden');
+        personalizedMessage.innerHTML = message;
+        form.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+        personalizedMessage.classList.remove('hidden');
+    } else {
+        errorMessage.classList.remove('hidden');
+    }
 }
 
 const submitButton = form.querySelector('#submitForm');
-submitButton.addEventListener('click', formLogic);
+submitButton.addEventListener('click', sendForm);

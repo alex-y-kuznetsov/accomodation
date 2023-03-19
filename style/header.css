@@ -22,10 +22,12 @@
     background-color: var(--primary-bg-color);
     box-shadow: var(--primary-shadow);
     padding: 4px;
-    width: 110%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.level-one-item:hover .level-two-list {
+.level-one-item:hover .level-two-list,
+.level-one-item:focus-within .level-two-list {
     display: block;
     z-index: 1;
 }

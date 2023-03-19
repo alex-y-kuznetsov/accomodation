@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #215170;
+    --primary-color: rgb(33, 81, 112);
     --text-color: #303030;
     --highlight-color: #303030;
     --primary-bg-color: #ffffff;
     --alt-bg-color: #e8e9e9;
     --secondary-bg-color: #dde9eb;
+    --scrollbar-color: rgba(33, 81, 112, 0.5);
     --color-white: #ffffff;
     --color-green: #1beb85;
     --color-blue: #7098b2;
@@ -24,6 +25,24 @@ body {
     line-height: 24px;
     background-color: var(--primary-bg-color);
     height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    margin-left: 2px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--alt-bg-color);
+  }
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 6px;
+    -webkit-transition: background-color 2s;
+    transition: background-color 2s;
 }
 
 h1,
@@ -70,9 +89,11 @@ a {
 
 a[href] {
     cursor: pointer;
+    outline: none;
 }
 
-a[href]:hover {
+a[href]:hover,
+a[href]:focus {
     background-color: var(--primary-color);
     color: var(--color-white);
     font-weight: bold;

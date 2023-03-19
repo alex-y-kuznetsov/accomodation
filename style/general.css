@@ -118,7 +118,9 @@ p {
 }
 
 .button:hover,
-a[href].button:hover {
+a[href].button:hover,
+.button:focus,
+a[href].button:focus {
     font-weight: normal;
     background-color: var(--primary-color);
     color: var(--color-white);

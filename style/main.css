@@ -143,6 +143,7 @@
     margin: 0;
     cursor: pointer;
     position: relative;
+    outline: none;
 }
 
 .gallery-item-overlay {
@@ -161,7 +162,8 @@
     color: var(--color-white);
 }
 
-.gallery-item:hover .gallery-item-overlay {
+.gallery-item:hover .gallery-item-overlay,
+.gallery-item:focus .gallery-item-overlay {
     display: flex;
 }
 

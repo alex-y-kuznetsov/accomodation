@@ -1,4 +1,4 @@
-//Mobile Menu
+// Mobile Menu
 const header = document.querySelector('#header');
 const burgerButton = header.querySelector('#burgerButton');
 
@@ -13,6 +13,46 @@ function toggleMobileMenu() {
 };
 
 burgerButton.addEventListener('click', toggleMobileMenu);
+
+// Slider
+function initSlider() {
+    var slider = document.querySelector('#slider');
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.querySelector('#sliderCover');
+    var count = 1;
+    var items = slideList.querySelectorAll('li');
+
+    function setItemWidth() {
+        items.forEach(item => {
+            item.style.width = sliderWidth  + 'px';
+        })
+    };
+
+    setItemWidth();
+
+    window.addEventListener('resize', function() {
+        sliderWidth = slider.offsetWidth;
+        setItemWidth();
+    });
+
+    function nextSlide() {
+        if (count < items.length) {
+            slideList.style.left = '-' + count * sliderWidth + 'px';
+            count++;
+        }
+        else if (count = items.length) {
+            slideList.style.left = '0px';
+            count = 1;
+        }
+    };
+    
+setInterval(nextSlide, 5000);
+    
+};
+    
+window.onload = () => {
+    initSlider();  
+}
 
 // Form
 const form = document.querySelector('#contactForm');

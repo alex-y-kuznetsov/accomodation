@@ -58,3 +58,33 @@ function sendForm(evt) {
 
 const submitButton = form.querySelector('#submitForm');
 submitButton.addEventListener('click', sendForm);
+
+// Modal
+const thumbnailImages = document.querySelectorAll('.gallery-item');
+const modalWrap = document.querySelector('#modalWrap');
+const modalOverlay = modalWrap.querySelector('#modalOverlay');
+const modalClose = modalWrap.querySelector('#modalClose');
+
+function openImageModal(evt) {
+    const modalImage = modalWrap.querySelector('#modalImage');
+    modalImage.setAttribute('src', evt.currentTarget.dataset.url);
+    modalWrap.classList.remove('hidden');
+};
+
+function closeImageModal() {
+    modalWrap.classList.add('hidden');
+}
+
+function closeOnEsc(evt) {
+    if (evt.key === 'Escape') {
+        modalWrap.classList.add('hidden');
+    }
+};
+
+thumbnailImages.forEach(item => {
+    item.addEventListener('click', openImageModal);
+})
+
+modalClose.addEventListener('click', closeImageModal);
+modalOverlay.addEventListener('click', closeImageModal);
+document.addEventListener('keydown', closeOnEsc);

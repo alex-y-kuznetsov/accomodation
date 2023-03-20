@@ -10,6 +10,7 @@
     --color-green: #1beb85;
     --color-blue: #7098b2;
     --color-danger: #ff0000;
+    --color-overlay: rgba(15,40,68,.4);
     --primary-shadow: 0 0 4px rgba(0,0,0,.1),0 4px 12px rgba(0,0,0,.1);
     --main-transition: 0.2s;
 }

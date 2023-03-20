@@ -29,6 +29,11 @@ body {
     height: 100%;
 }
 
+body.modal-open {
+    overflow: hidden;
+    padding-right: 8px;
+}
+
 body::-webkit-scrollbar {
     width: 10px;
     height: 10px;

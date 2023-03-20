@@ -60,6 +60,7 @@ const submitButton = form.querySelector('#submitForm');
 submitButton.addEventListener('click', sendForm);
 
 // Modal
+const body = document.querySelector('body');
 const thumbnailImages = document.querySelectorAll('.gallery-item');
 const modalWrap = document.querySelector('#modalWrap');
 const modalOverlay = modalWrap.querySelector('#modalOverlay');
@@ -69,15 +70,18 @@ function openImageModal(evt) {
     const modalImage = modalWrap.querySelector('#modalImage');
     modalImage.setAttribute('src', evt.currentTarget.dataset.url);
     modalWrap.classList.remove('hidden');
+    body.classList.add('modal-open');
+    evt.currentTarget.blur();
 };
 
 function closeImageModal() {
     modalWrap.classList.add('hidden');
+    body.classList.remove('modal-open');
 }
 
 function closeOnEsc(evt) {
     if (evt.key === 'Escape') {
-        modalWrap.classList.add('hidden');
+        closeImageModal()
     }
 };
 

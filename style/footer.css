@@ -35,3 +35,27 @@
     font-size: 14px;
     line-height: 16px;
 }
+
+@media (max-width: 768px) {
+    .footer-cover {
+        gap: 8px;
+    }
+
+    .footer-main-link {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .footer-sub-link {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .extra-text {
+        display: none;
+    }
+
+    .footer-col .logo {
+        width: 54px;
+    }
+}

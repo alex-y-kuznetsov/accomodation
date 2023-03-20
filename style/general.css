@@ -154,3 +154,15 @@ a[href].button:focus {
     color: var(--color-white);
     transition: all var(--main-transition);
 }
+
+@media (max-width: 768px) {
+    body,
+    .button {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    body.modal-open {
+        padding-right: 0;
+    }
+}

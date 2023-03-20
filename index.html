@@ -12,7 +12,7 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-cover">
                 <div class="logo">
@@ -56,6 +56,10 @@
                 <div class="page-search">
                     <input type="text" class="form-input search-input" placeholder="Search this page">
                 </div>
+                <button class="burger-button" id="burgerButton">
+                    <span class="burger-line burger-top-line"></span>
+                    <span class="burger-line burger-bot-line"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -217,7 +221,7 @@
         <div class="container">
             <div class="footer-cover">
                 <div class="footer-col">
-                    <a class="footer-main-link" href="#accomodation">Our accomodations</a>
+                    <a class="footer-main-link" href="#accomodation">Accomodations</a>
                     <ul>
                         <li>
                             <a class="footer-sub-link" href="#cozy">Cozy</a>
@@ -231,7 +235,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <a class="footer-main-link" href="#life">Our social life</a>
+                    <a class="footer-main-link" href="#life">Social <span class="extra-text">Life</span></a>
                     <ul>
                         <li>
                             <a class="footer-sub-link" href="#events">Events</a>
@@ -242,7 +246,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                        <a class="footer-main-link" href="#gallery">Campus Gallery</a>
+                        <a class="footer-main-link" href="#gallery"><span class="extra-text">Campus</span> Gallery</a>
                         <a class="footer-main-link" href="#news">News</a>
                     <div class="logo">
                         <div class="logo-body">a</div>

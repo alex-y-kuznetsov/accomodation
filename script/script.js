@@ -1,3 +1,14 @@
+//Mobile Menu
+const header = document.querySelector('#header');
+const burgerButton = header.querySelector('#burgerButton');
+
+function toggleMobileMenu() {
+    header.classList.contains('menu-open') ? header.classList.remove('menu-open') : header.classList.add('menu-open');
+    burgerButton.classList.contains('cross-button') ? burgerButton.classList.remove('cross-button') : burgerButton.classList.add('cross-button');
+};
+
+burgerButton.addEventListener('click', toggleMobileMenu);
+
 // Form
 const form = document.querySelector('#contactForm');
 

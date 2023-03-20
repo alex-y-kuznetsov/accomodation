@@ -153,11 +153,12 @@
 .gallery-cover {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: repeat(auto-fill, 260px);
     gap: 20px;
 }
 
 .gallery-item {
+    height: 195px;
     border: none;
     background-color: transparent;
     padding: 0;
@@ -212,4 +213,44 @@
     font-size: 14px;
     line-height: 16px;
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    /* Form */
+    .contact-form {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .form-input {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    /* Cards */
+    .cards-cover {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-item {
+        width: auto;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 590px) {
+    /* Life */
+    .life-item {
+        gap: 10px;
+    }
+
+    .life-item + .life-item {
+        margin-top: 40px;
+    }
+
+    /* Gallery */
+    .gallery-cover {
+        justify-content: center;
+    }
 }

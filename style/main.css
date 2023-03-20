@@ -30,6 +30,7 @@
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 20px;
+    min-height: 70px;
 }
 
 .form-cover {
@@ -56,6 +57,11 @@
 
 .form-input.error {
     border-bottom-color: var(--color-danger);
+}
+
+.personalized-message {
+    margin-top: 20px;
+    min-height: 70px;
 }
 
 .error-message {

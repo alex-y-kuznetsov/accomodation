@@ -122,9 +122,13 @@ const modalWrap = document.querySelector('#modalWrap');
 const modalOverlay = modalWrap.querySelector('#modalOverlay');
 const modalClose = modalWrap.querySelector('#modalClose');
 const modalImage = modalWrap.querySelector('#modalImage');
+const modalImageWebp = modalWrap.querySelector('#modalImageWebp');
+const modalImageJpeg = modalWrap.querySelector('#modalImageJpeg');
 
 function openImageModal(evt) {
-    modalImage.setAttribute('src', evt.currentTarget.dataset.url);
+    modalImage.setAttribute('src', evt.currentTarget.dataset.jpg);
+    modalImageWebp.setAttribute('srcset', evt.currentTarget.dataset.webp);
+    modalImageJpeg.setAttribute('srcset', evt.currentTarget.dataset.jpg);
     modalWrap.classList.remove('hidden');
     body.classList.add('modal-open');
     evt.currentTarget.blur();
@@ -134,6 +138,8 @@ function closeImageModal() {
     modalWrap.classList.add('hidden');
     body.classList.remove('modal-open');
     modalImage.setAttribute('src', '');
+    modalImageWebp.setAttribute('srcset', '');
+    modalImageJpeg.setAttribute('srcset', '');
 }
 
 function closeOnEsc(evt) {

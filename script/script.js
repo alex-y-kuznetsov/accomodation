@@ -3,8 +3,13 @@ const header = document.querySelector('#header');
 const burgerButton = header.querySelector('#burgerButton');
 
 function toggleMobileMenu() {
-    header.classList.contains('menu-open') ? header.classList.remove('menu-open') : header.classList.add('menu-open');
-    burgerButton.classList.contains('cross-button') ? burgerButton.classList.remove('cross-button') : burgerButton.classList.add('cross-button');
+    header.classList.contains('menu-open') ? 
+    header.classList.remove('menu-open') : 
+    header.classList.add('menu-open');
+    
+    burgerButton.classList.contains('cross-button') ? 
+    burgerButton.classList.remove('cross-button') : 
+    burgerButton.classList.add('cross-button');
 };
 
 burgerButton.addEventListener('click', toggleMobileMenu);
@@ -76,9 +81,9 @@ const thumbnailImages = document.querySelectorAll('.gallery-item');
 const modalWrap = document.querySelector('#modalWrap');
 const modalOverlay = modalWrap.querySelector('#modalOverlay');
 const modalClose = modalWrap.querySelector('#modalClose');
+const modalImage = modalWrap.querySelector('#modalImage');
 
 function openImageModal(evt) {
-    const modalImage = modalWrap.querySelector('#modalImage');
     modalImage.setAttribute('src', evt.currentTarget.dataset.url);
     modalWrap.classList.remove('hidden');
     body.classList.add('modal-open');
@@ -88,6 +93,7 @@ function openImageModal(evt) {
 function closeImageModal() {
     modalWrap.classList.add('hidden');
     body.classList.remove('modal-open');
+    modalImage.setAttribute('src', '');
 }
 
 function closeOnEsc(evt) {

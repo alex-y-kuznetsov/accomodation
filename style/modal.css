@@ -46,7 +46,42 @@
     cursor: pointer;
     border: 1px solid var(--primary-color);
     border-radius: 4px;
-    padding: 2px 6px 3px 6px;
+    padding: 0;
+    transition: all var(--main-transition);
+    width: 22px;
+    height: 22px;
+    transition: all var(--main-transition);
+  }
+
+  .modal-close:before,
+  .modal-close:after {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 1px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 2px;
+    top: 10px;
+    transition: all var(--main-transition);
+  }
+
+  .modal-close:before {
+    transform: rotate(-45deg);
+  }
+
+  .modal-close:after {
+    transform: rotate(45deg);
+  }
+
+  .modal-close:hover {
+    background-color: var(--primary-color);
+    transition: all var(--main-transition);
+  }
+
+  .modal-close:hover::before,
+  .modal-close:hover::after {
+    background-color: var(--primary-bg-color);
     transition: all var(--main-transition);
   }
 
